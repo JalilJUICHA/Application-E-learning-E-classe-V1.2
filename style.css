@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+.contanr{
+    background: linear-gradient(-120deg , rgb(250, 255, 193), rgb(0, 193, 254));
+    height: 100vh;
+}
+
+li:hover{
+    background-color: rgb(53, 158, 255);
+    border-radius: 5px;
+}
