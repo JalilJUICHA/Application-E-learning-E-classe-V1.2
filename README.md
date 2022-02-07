@@ -1,43 +1,43 @@
-# E-LEARNING-APPLICATION-V1.0-E-ClasseContexte du projet
-Votre équipe de désigne vient de terminer la maquette de l'application E-Classe. En tant que développeur polyvalent, votre mission est d'intégrer la maquette avec un framework CSS de votre choix ainsi d'appliquer le principe **DRY **via le language PHP. Vous devez, donc, répondre aux histoires suivants :
+# E-LEARNING-APPLICATION-V1.1-E-ClasseContexte du projet
+Contexte du projet
+Vous êtes un développeur backend, votre équipe a besoin de vous pour enregistrer les données de l'application web E-Classe sur la base de données.
 
-Autant que intégrateur web, je peux réliser l'interface utilisateur statique et adaptable de la maquette fournie par votre équipe désigners avec un **framework **CSS (Bootstrap 5, Tailwind CSS).
-Autant que intégrateur web, je peux m'assurer que l'interface est accessible.
-Autant que intégrateur web, je peux m'assurer que le code est validé via les outils W3C.
-Autant que Développeur PHP, je peux découper les élements (Sidebar, Header et Footer) en des composants PHP.
-Autant que Développeur PHP, je peux stocker la liste des étudiants en un seul tableau associatif et les itérer dans la page web Students.
-Autant que Développeur PHP, je peux stocker les détails des payements en un seul tableau associatif et les itérer dans la page web Payement.
-Pré-requis:
+Vous devez donc répondre aux histoires suivantes :
 
-Aquérir la compétence C2.
-Vous pouvez utiliser des frameworks et des boîtes à outils CSS comme Bootstrap, Tailwind Css et Font Awesome.
-Initialisez votre projet comme un dépôt public sur GitHub.
-Avoir des commits journaliers.
-Déroulement:
+Autant que Développeur backend PHP, je peux créer une base de données nommée e_classe_db
+Autant que Développeur backend PHP, je peux connecter ma base de données avec l'application web E-Classe.
+Autant que Développeur backend PHP, je peux ajouter trois tables students, courses et payment_details.
+Autant que Développeur backend PHP, je peux appliquer le système CRUD (ajouter, afficher, modifier et supprimer) d'une manière dynamique sur les deux tables students et courses.
+Autant que Développeur backend PHP, je peux ajouter et afficher seulement les données de la table payment_details.
+Autant que Visiteur de l'application, je peux voir les cartes de statistiques sont dynamiques sur la page Dashboard.
+Autant que Développeur backend PHP, je peux m'assurer que l'accéss à la base de données est sécurisé (optionnel).
+Pré-requis
 
-Préparer votre Workflow (Scrum board - Github - Environement de travail).
-Intégrer la maquette.
-Traiter la partie de l'accessibilité et la validation W3C.
-Réalisation des workshops suivants : lien
-Implémenter le principe de développement DRY.
+Aquérir la compétence C2N3, C5N1, C6N1, C7N1.
+Finaliser le travail demandé dans le brief précèdent.
+Travailler avec un workflow Github.
+Travailler avec un tableau SCRUM.
+
+
+Déroulement
+
+Ajouter les histoires utilisateur dans le backlog de manière organisé.
+Réaliser les tâches en respectant un workflow Github.
+Réalisation des workshops suivants : Lien 1
+
+
 Modalités pédagogiques
 Travail individuel.
-L'intégration à liver le 17/01/2022
-La migration de l'application E-Classe vers PHP à livrer le 21/01/2022.
-Le lien du site à livrer avant le 22/01/2022.
+
+Le travail à liver avant le 04/02/2022
+
 Critères de performance
-Site (structure, réalisation technique, mise en page, conception, convivialité)
-Contenu (qualité du contenu)
-Conception réactive (le site se comporte correctement sur tous les appareils, navigateurs et plateformes)
-Validation et qualité de l'accessibilité
-Travail d'équipe (utilisation de GitHub ; chaque membre de l'équipe a contribué de manière journalière)
-Le code produit doit respecter le principe de développement DRY.
-Le résultat doit être fonctionnel.
+Travail individuel (utilisation de GitHub de manière journalière)
+Code clean et organisé
 
 Modalités d'évaluation
 Présenter une défense publique de son travail devant les formateurs de Youcode.
-Les équipes n'auront que ~10 minutes pour ce qui suit :
-
+Les équipes n'auront que ~5 minutes pour ce qui suit :
 Démontrer le contenu et la fonctionnalité du site Web (très rapidement).
 Démontrer le site dans différentes tailles d'écran (responsive design).
 Démontrer que votre code se valide correctement.
