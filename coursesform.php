@@ -31,20 +31,23 @@
                         <h2>Courses List</h2>
                     </div>
                 
-                <form action="">
+                <form action="addcourses.php" method="POST">
                     <div class=" d-flex flex-column text-muted ">
                         <label for="" class="col-form-label">Courses Name</label>
-                        <input type="text" placeholder="Enter The Name Courses"
+                        <input type="text" name="courses_name" placeholder="Enter The Name Courses"
                             class="w-100 rounded-3 border  p-2 bg-transparent form-control">
                     </div>
                     <div class=" d-flex flex-column text-muted mt-3 text">
                         <label for="">Date</label>
-                        <input type="Date" placeholder="Enter  The Date"
+                        <input type="Date" name="date" placeholder=""
                             class="w-100 rounded-3 border p-2 bg-transparent form-control">
                     </div>
                     <div class="mt-3">
-                        <a href="dashboard.php" class="btn btn-info w-100 rounded-3 border-1 text-white text-uppercase"> Submit </a>
-                    </div>
+                            <button type="Submit"
+                                class="btn btn-info w-100 rounded-3 border-1 text-white text-uppercase" value="Submit"
+                                name="save">ADD</button>
+                        </div>
+
                     
                     </form>
                     

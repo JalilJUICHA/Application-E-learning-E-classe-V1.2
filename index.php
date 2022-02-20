@@ -23,7 +23,7 @@
                         <h3 class="text-uppercase">Sign In</h3>
                         <p class="text-muted">Enter your credentials to access your account</p>
                     </div>
-                    <form action="">
+                    <form action="login.php" method="POST">
                     <div class=" d-flex flex-column text-muted ">
                         <label for="" class="col-form-label">E-mail</label>
                         <input type="email" placeholder="Enter your email"

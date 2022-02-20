@@ -30,40 +30,61 @@
                     <div class="col-10  d-flex flex-nowrap justify-content-between w-100">
                         <h2>Students List</h2>
                     </div>
+                    <?php
+                        include 'configdata/config.php';
+                        $id = $_GET['edit'];
+                        $sql = "SELECT * FROM students WHERE id = $id";
+                        $resultat = mysqli_query($config , $sql);
+                        $new = mysqli_fetch_assoc($resultat);
+                    ?>
 
-                    <form action="addstudents.php" method="POST">
+                    <form method="POST">
                         <div class=" d-flex flex-column text-muted ">
                             <label for="" class="col-form-label">Name</label>
-                            <input type="text" id="name" name="name" placeholder="Enter your Name"
+                            <input type="text" id="name" name="name" value="<?php echo $new['name'];?>"
                                 class="w-100 rounded-3 border  p-2 bg-transparent form-control">
                         </div>
                         <div class=" d-flex flex-column text-muted mt-3 text">
                             <label for="">Email</label>
-                            <input type="email" id="email" name="email" placeholder="Enter your Email"
+                            <input type="email" id="email" name="email" value="<?php echo $new['email'];?>"
                                 class="w-100 rounded-3 border p-2 bg-transparent form-control">
                         </div>
                         <div class=" d-flex flex-column text-muted mt-3 text">
                             <label for="">Phone</label>
-                            <input type="number" id="phone" name="phone" placeholder="Enter your PhoneNumber"
+                            <input type="number" id="phone" name="phone" value="<?php echo $new['phone'];?>"
                                 class="w-100 rounded-3 border p-2 bg-transparent form-control">
                         </div>
                         <div class=" d-flex flex-column text-muted mt-3 text">
                             <label for="">Enroll Number</label>
-                            <input type="number" id="number" name="enroll_number" placeholder="Enter your EnrollNumber"
+                            <input type="number" id="number" name="enroll_number" value="<?php echo $new['enroll_number'];?>"
                                 class="w-100 rounded-3 border p-2 bg-transparent form-control">
                         </div>
                         <div class=" d-flex flex-column text-muted mt-3 text">
                             <label for="date_of_admission">Date Of Admission</label>
                             <input type="date" id="number" name="date_of_admission"
-                                placeholder="Enter the date of admission"
+                            value="<?php echo $new['date_of_admission'];?>"
                                 class="w-100 rounded-3 border p-2 bg-transparent form-control">
                         </div>
 
                         <div class="mt-3">
-                            <button type="Submit"
+                        
+                            <button type="submit"
                                 class="btn btn-info w-100 rounded-3 border-1 text-white text-uppercase" value="Submit"
-                                name="save">Save</button>
+                                name="submit">Save</button>
                         </div>
+                        <?php
+                            if(isset($_POST['submit'])){
+                                $name = $_POST['name'];
+                                $email = $_POST['email'];
+                                $phone = $_POST['phone'];
+                                $enroll_number= $_POST['enroll_number'];
+                                $date_of_admission = $_POST['date_of_admission'];
+                                $query = "UPDATE students set id = $id , name='$name',email='$email',phone='$phone',enroll_number='$enroll_number',date_of_admission='$date_of_admission' where id='$id'";
+                                $resultat=mysqli_query($config,$query);
+                                echo '<script>window.location.href = "students.php";</script>';
+                                mysqli_close($config,$query);
+                            }
+                        ?>
 
                     </form>
 

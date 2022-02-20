@@ -1,3 +1,21 @@
+<?php
+    require_once 'configdata/config.php';
+
+    $students_sql = "SELECT COUNT(id) FROM students";
+    $students_query = mysqli_query($config, $students_sql);
+    $students_num = mysqli_fetch_array($students_query);
+
+    $courses_sql = "SELECT COUNT(id) FROM courses";
+    $courses_query = mysqli_query($config, $courses_sql);
+    $courses_num = mysqli_fetch_array($courses_query);
+
+    $payment_sql = "SELECT SUM(amounts_paid) FROM payments_details";
+    $payment_query = mysqli_query($config, $payment_sql);
+    $payment_sum = mysqli_fetch_array($payment_query);
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,7 +52,9 @@
                                 <i class="fa fa-graduation-cap fa-lg"></i>
                                 <p class="text-muted ">Students</p>
                                 <p class="fa-xs d-flex justify-content-end text-dark fw-bold fs-5">
-                                    243
+                                    <?php
+                                        echo $students_num[0];
+                                    ?>
                                 </p>
                             </div>
                         </div>
@@ -46,7 +66,9 @@
                                 <i class="fa fa-bookmark fa-lg"></i>
                                 <p class="text-muted">Course</p>
                                 <p class="d-flex justify-content-end text-dark fw-bold fs-5">
-                                    13
+                                <?php
+                                        echo $courses_num[0];
+                                    ?>
                                 </p>
                             </div>
                         </div>
@@ -58,7 +80,9 @@
                                 <i class="fa fa-usd" aria-hidden="true"></i>
                                 <p class="text-muted">Payments</p>
                                 <p class="fa-xs d-flex justify-content-end text-dark fw-bold fs-5">
-                                    Dhs 556, 000
+                                <?php
+                                        echo $payment_sum[0];
+                                    ?>
                                 </p>
                             </div>
                         </div>
